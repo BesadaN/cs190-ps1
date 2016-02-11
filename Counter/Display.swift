@@ -106,7 +106,7 @@ class Display: UIView {
         CGContextMoveToPoint(context, upperLeft.x, upperLeft.y)
         CGContextAddLineToPoint(context, upperRight.x, upperRight.y)
         CGContextAddLineToPoint(context, lowerRight.x, lowerRight.y)
-        CGContextAddLineToPoint(context, lowerRight.x, lowerLeft.y)
+        CGContextAddLineToPoint(context, lowerLeft.x, lowerLeft.y)
         CGContextAddLineToPoint(context, upperLeft.x, upperLeft.y)
         CGContextFillPath(context)
     }
@@ -144,8 +144,12 @@ class Display: UIView {
         segmentMasks[9],  // 9
     ]
     
+    
+    
     // This is a 15-digit display.
     let digits = 15
+  
+    
 
     // When you are done with this function, it should draw all 15 SSC's and it should use the masks array above to
     // make the 15 SSCs show -1.23456790 99.
@@ -157,9 +161,13 @@ class Display: UIView {
         let xOrigin = bounds.origin.x
         let yOrigin = bounds.origin.y
         // This needs re-doing. The segmentWidth is the whole view width. It should only be one-fifteenth of that.
-        let sscRect = CGRectMake(xOrigin, yOrigin, bounds.size.width, segmentHeight)
+        let sscRect = CGRectMake(xOrigin, yOrigin, bounds.size.width * 1/15, segmentHeight)
         // This needs completing. It only draws one SSC. It needs to be put in a loop to show all 15 SSCs.
-        drawSSC(context, sscRect:sscRect, mask:segmentMasks[8])
+        for index in masks {
+        drawSSC(context, sscRect:sscRect, mask:index)
+        }
     }
+    
+    
 
 }
