@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,21 +19,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oqm-Y6-cJi" customClass="Display" customModule="Counter" customModuleProvider="target">
-                                <rect key="frame" x="20" y="20" width="560" height="229"/>
+                                <rect key="frame" x="20" y="20" width="165" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Oqm-Y6-cJi" secondAttribute="height" multiplier="83:34" id="8zK-2U-j1P"/>
+                                    <constraint firstAttribute="height" constant="20" id="et3-ek-b7S"/>
+                                    <constraint firstAttribute="width" constant="165" id="vcD-wg-mlP"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Oqm-Y6-cJi" secondAttribute="trailing" id="XLZ-ZS-tC6"/>
-                            <constraint firstItem="Oqm-Y6-cJi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nk0-mc-CNi"/>
-                            <constraint firstItem="Oqm-Y6-cJi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="o4j-Xy-ldI"/>
+                            <constraint firstItem="Oqm-Y6-cJi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2Iw-lZ-n3H"/>
+                            <constraint firstItem="Oqm-Y6-cJi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EpF-Z0-0Fy"/>
+                            <constraint firstItem="Oqm-Y6-cJi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="X36-LI-sBp"/>
                         </constraints>
                     </view>
                 </viewController>
